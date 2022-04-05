@@ -1,8 +1,9 @@
-
-<div>
-  <h1>My Tasks</h1>
+<h4 class="m-3"><%=link_to "Create New Task", new_task_path%></h4>
+<div class="mx-5">
+    <h1 class="text-center mx-auto mt-5">My Tasks</h1>
+  <ol class="d-flex flex-column mt-5 text-center">
   <% @tasks.each do |task| %>
-    <h1><%= link_to task.title, task_path(task)%></h1>
+    <li class=""><%= link_to task.title, task_path(task)%></li>
   <%end%>
-  <p><%=link_to "Create New Task", new_task_path%></p>
+  </ol>
 </div>

@@ -1,6 +1,13 @@
-<%= simple_form_for(task) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :details %>
-  <%= f.input :completed %>
-  <%= f.submit %>
-<% end %>
+<div class="container mt-5">
+  <div class="flex-row">
+    <%= simple_form_for(task) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :details %>
+      <%= f.input :completed %>
+      <div class="d-flex justify-content-between">
+        <p><%= f.submit %></p>
+        <p><%=link_to "Home", tasks_path%></p>
+      </div>
+    <% end %>
+  </div>
+</div>
